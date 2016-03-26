@@ -1,6 +1,8 @@
 class AgriusersController < ApplicationController
   before_action :set_agriuser, only: [:show, :edit, :update, :destroy]
-
+  def be_liked 
+    render nothing: true
+  end
   # GET /agriusers
   # GET /agriusers.json
   def index
