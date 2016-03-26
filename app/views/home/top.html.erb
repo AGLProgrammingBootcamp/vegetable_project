@@ -2,8 +2,12 @@
 
 <h1>Hello! Vegetable</h1>
 
-+<%= link_to "Vegetableへようこそ！","about" %>
-+
-+<%= form_tag do %>
-+<input type = "submit" value="ありがとう!">
+<%= link_to "やさいいね！へようこそ！", about_path %>
+
+<%= @agriusers.each do |agriuser| %>
+<%= link_to "ありがとう！！", be_liked_agriuser_path(agriuser) %>
+<%end%>
+    
+<%= form_tag do %>
+<input type = "submit" value="ありがとう!">
 <%end%>
