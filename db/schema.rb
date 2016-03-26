@@ -21,10 +21,4 @@ ActiveRecord::Schema.define(version: 20160326055509) do
     t.integer  "likescounter"
   end
 
-  create_table "thanks", force: :cascade do |t|
-    t.string   "toNouka"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
