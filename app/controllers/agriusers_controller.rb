@@ -1,7 +1,9 @@
 class AgriusersController < ApplicationController
-  before_action :set_agriuser, only: [:show, :edit, :update, :destroy]
+  before_action :set_agriuser, only: [:show, :edit, :update, :destroy, :be_liked]
   def be_liked 
-    render nothing: true
+    @agriuser.increment(:likescounter)
+    @agriuser.save
+    redirect_to :back
   end
   # GET /agriusers
   # GET /agriusers.json
