@@ -10,5 +10,10 @@
   <%= @agriuser.email %>
 </p>
 
+<p>
+  <strong>ありがとう数:</strong>
+  <%= @agriuser.likescounter %>人の購入者からありがとうが集まっています！
+</p>
+
 <%= link_to 'Edit', edit_agriuser_path(@agriuser) %> |
 <%= link_to 'Back', agriusers_path %>
