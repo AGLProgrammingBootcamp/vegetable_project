@@ -4,7 +4,7 @@
 
 <%= link_to "やさいいね！へようこそ！", about_path %>
 
-<%= @agriusers.each do |agriuser| %>
+<% @agriusers.each do |agriuser| %>
 <%= link_to "ありがとう！！", be_liked_agriuser_path(agriuser) %>
 <%end%>
     
