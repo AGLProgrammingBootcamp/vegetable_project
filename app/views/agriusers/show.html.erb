@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>利用者のページ</h1>
+
 <p>
   <strong>Name:</strong>
   <%= @agriuser.name %>
@@ -15,5 +17,5 @@
   <%= @agriuser.likescounter %>人の購入者からありがとうが集まっています！
 </p>
 
-<%= link_to 'Edit', edit_agriuser_path(@agriuser) %> |
-<%= link_to 'Back', agriusers_path %>
+<%= link_to '編集', edit_agriuser_path(@agriuser) %> |
+<%= link_to '一覧', agriusers_path %>

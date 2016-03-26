@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326055509) do
+ActiveRecord::Schema.define(version: 20160326074543) do
 
   create_table "agriusers", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20160326055509) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "likescounter"
+    t.string   "vegitable1"
+    t.string   "vegitable2"
+    t.string   "vegitable3"
+    t.text     "comment"
   end
 
 end
