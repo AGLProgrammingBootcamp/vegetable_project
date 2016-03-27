@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.footer-left li {
+  margin-bottom: 5px;
+  /*文字の色を#808080*/
+  color:#808080;
+  /*太さ1px 種類dotted 色#808080 */
+  border-bottom:1px dotted #808080;
+}
+
+.footer {
+  height: 200px;
+  clear: left;
+  
+}
+
+.footer-left {
+  float: left;
+  width: 400px;
+  padding: 30px 100px; 
+  margin: 0 auto;
+}

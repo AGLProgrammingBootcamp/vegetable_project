@@ -68,8 +68,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%=link_to "新規登録(生産者用)",new_agriuser_path %></li>
-            <li class="active"><%=link_to"新規登録",new_agriuser_path %><span class="sr-only"></span></li>
+            <li><%=link_to "生産者一覧",agriusers_path %></li>
+            <li class="active"><%=link_to"新規登録(生産者用)",new_agriuser_path %><span class="sr-only"></span></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -85,17 +85,24 @@
             <%= yield %>
         </nav>
       </div>
+    </div> <!-- /container -->
 
 
       <!-- Example row of columns -->
    
       <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; 2016 Matsubara & Kambara</p>
-      </footer>
+    <footer class="footer">
+      <div class="footer-left">
+        <ul>
+        <li>会社概要</li>
+        <li>採用</li>
+        <li>お問い合わせ</li>
+        </ul>
+      </div>
+      
+    </footer>
 
-    </div> <!-- /container -->
-
+    
   </body>
 
 </html>
