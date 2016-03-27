@@ -1,6 +1,47 @@
-<h1>Editing Agriuser</h1>
+<h1>生産者情報更新</h1>
 
-<%= render 'form' %>
+<%= form_for(@agriuser) do |f| %>
+  <% if @agriuser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agriuser.errors.count, "error") %> prohibited this agriuser from being saved:</h2>
 
-<%= link_to 'Show', @agriuser %> |
-<%= link_to 'Back', agriusers_path %>
+      <ul>
+      <% @agriuser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "名前" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %><br>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :vegitable1, "生産品1" %><br>
+    <%= f.text_field :vegitable1 %>
+  </div>
+  <div class="field">
+    <%= f.label :vegitable2, "生産品2" %><br>
+    <%= f.text_field :vegitable2 %>
+  </div>
+  <div class="field">
+    <%= f.label :vegitable3, "生産品3" %><br>
+    <%= f.text_field :vegitable3 %>
+  </div>
+  <div class="field">
+    <%= f.label :comment, "生産者からの一言" %><br>
+    <%= f.text_area :comment, size: "30x5" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
+
+
+<h4 class="back"><a href="/agriusers">一覧へ戻る </a></h4>

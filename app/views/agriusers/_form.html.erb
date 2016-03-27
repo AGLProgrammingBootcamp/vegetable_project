@@ -12,13 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "名前" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email,"メールアドレス" %><br>
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :vegitable1,"生産品1" %><br>
+    <%= f.text_field :vegitable1 %>
+  </div>
+　<div class="field">
+    <%= f.label :vegitable2,"生産品2" %><br>
+    <%= f.text_field :vegitable2 %>
+  </div>
+  <div class="field">
+    <%= f.label :vegitable3,"生産品3" %><br>
+    <%= f.text_field :vegitable3 %>
+  </div>
+  <div class="field">
+    <%=f.label :comment,"生産者からの一言"%><br>
+    <%= text_area :comtent, :size => "40x30" %>
   <div class="actions">
     <%= f.submit %>
   </div>

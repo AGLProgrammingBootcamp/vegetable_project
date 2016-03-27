@@ -73,6 +73,6 @@ class AgriusersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agriuser_params
-      params.require(:agriuser).permit(:name, :email)
+      params.require(:agriuser).permit(:name, :email, :vegitable1, :vegitable2, :vegitable3, :comment)
     end
 end
