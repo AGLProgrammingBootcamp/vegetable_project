@@ -1,5 +1,26 @@
-<h1>New Agriuser</h1>
+<%- model_class = Agriuser -%>
+<div class="page-header">
+  <h1>生産者新規登録</h1>
+</div>
 
-<%= render 'form' %>
+<%= form_for @agriuser, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :名前, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :メールアドレス, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <br>
+  <br>
 
-<%= link_to 'Back', agriusers_path %>
+  <%= f.submit "新規登録",:confirm =>"変更します" ,:class => 'btn btn-primary' %>
+  <%= link_to "取  消 ",
+            agriusers_path, :class => 'btn btn-default' %>
+ 
+<% end %>

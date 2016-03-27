@@ -1,33 +1,46 @@
-<p id="notice"><%= notice %></p>
-
-<h1>生産者一覧</h1>
-
-<table>
+<%- model_class = Agriuser -%>
+<div class="page-header">
+  <h1>生産者情報一覧</h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>名前</th>
-      <th>メールアドレス</th>
-      <th>ありがとう</th>
-      <th colspan="3"></th>
+
+      <th><%= "名前" %></th>
+      <th><%= "メール"%></th>
+      <th><%= "ありがとう" %></th>
+      <th colspan=3><%= "生産品" %></th>
+      <th><%= "コメント" %></th>
+      <th ><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @agriusers.each do |agriuser| %>
       <tr>
+
         <td><%= agriuser.name %></td>
         <td><%= agriuser.email %></td>
         <td><%= agriuser.likescounter %></td>
-        <td><%= link_to 'Show', agriuser %></td>
-        <td><%= link_to 'Edit', edit_agriuser_path(agriuser) %></td>
-        <td><%= link_to 'Destroy', agriuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= agriuser.vegitable1 %></td>
+        <td><%= agriuser.vegitable2 %></td>
+        <td><%= agriuser.vegitable3 %></td>
+        <td><%= agriuser.comment %></td>
+        <td>
+          <%= link_to "情報",
+                      agriuser_path(agriuser), :class => 'btn btn-default btn-xs' %>
+          <%= link_to "編集",
+                      edit_agriuser_path(agriuser), :class => 'btn btn-default btn-xs' %>
+          <%= link_to "削除",
+                      agriuser_path(agriuser),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to '新しい生産者を登録', new_agriuser_path %>
-<br>
-<br>
+<%= link_to "新規登録",
+            new_agriuser_path,
+            :class => 'btn btn-primary' %>
