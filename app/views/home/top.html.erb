@@ -9,7 +9,7 @@
  <div class="row">
    <div class="col-lg-4">
        <h2>生産者へありがとう！</h2>
-            <ul>
+            <ul style= "list-style:none;">
                 <% @agriusers.each do |agriuser| %>
                 <li class="list"><%= link_to agriuser.name + "さんへ", agriuser%><button class="btn"><%= link_to "ありがとう！！", be_liked_agriuser_path(agriuser) %></button><%= agriuser.likescounter%><%="人がありがとうを言っています。"%></li>
                 <%end%>
@@ -39,7 +39,7 @@
  </div>
 
  
-<%= link_to "やさいいね！！", about_path %>
+
 <!--   <div class="row">
         <div class="col-lg-4">
           <h2>ありがとう！ランキング</h2>
