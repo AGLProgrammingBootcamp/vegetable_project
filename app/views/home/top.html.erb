@@ -8,19 +8,33 @@
  </div>
  <div class="row">
    <div class="col-lg-4">
-       <h2>生産者へありがとう</h2>
-    <ul>
-        <% @agriusers.each do |agriuser| %>
-        <li class="list"><%= agriuser.name + "さんへ"%><button class="btn"><%= link_to "ありがとう！！", be_liked_agriuser_path(agriuser) %></button><%= agriuser.likescounter%><%="人がありがとうを言っています。"%></li>
-        <%end%>
-    </ul>  
+       <h2>生産者へありがとう！</h2>
+            <ul>
+                <% @agriusers.each do |agriuser| %>
+                <li class="list"><%= link_to agriuser.name + "さんへ", agriuser%><button class="btn"><%= link_to "ありがとう！！", be_liked_agriuser_path(agriuser) %></button><%= agriuser.likescounter%><%="人がありがとうを言っています。"%></li>
+                <%end%>
+            </ul>  
     </div>
     
     <div class="col-lg-4">
         <h2>ありがとう！ランキング</h2>
-          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">スズメ &raquo;</a></p>
+          <table class="type07">
+              <thead>
+                <tr>
+                  <th>名前</th>
+                  <th>ありがとう</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @agriusers1.each do |agriuser| %>
+                  <tr>
+                    <td><%= link_to agriuser.name , agriuser %></td>
+                    <td><%= agriuser.likescounter %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+        </table>
     </div>
  </div>
 
