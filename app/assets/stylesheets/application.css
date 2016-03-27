@@ -14,7 +14,7 @@
  *= require_self
  */
 
-.footer-left li {
+.footer-right li {
   margin-bottom: 5px;
   /*文字の色を#808080*/
   color:#808080;
@@ -28,9 +28,17 @@
   
 }
 
+.footer-right {
+  float: right;
+  width: 500px;
+  padding: 30px 170px; 
+  margin: 0 auto;
+}
+
 .footer-left {
   float: left;
-  width: 400px;
-  padding: 30px 100px; 
+  width: 500px;
+  padding: 30px 170px; 
   margin: 0 auto;
+  color:black;
 }
