@@ -4,4 +4,6 @@ class HomeController < ApplicationController
   def top
     @agriusers = Agriuser.all
   end
+  def mesh
+  end
 end
